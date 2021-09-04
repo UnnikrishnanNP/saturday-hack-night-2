@@ -1,7 +1,8 @@
+// when document is ready
 $(document).ready(function () {
 
     var follower = $("#slider").val()
-    var minimumFollower = 200  , maximumFollower = 400
+    var minimumFollower = 0  , maximumFollower = 10000
     var user = '' 
 
     $("#follower").html("No of Follower: " + follower)
@@ -38,7 +39,7 @@ $(document).ready(function () {
         $.get("https://api.github.com/search/users?q=followers:" + minimumFollower + ".." + maximumFollower + "&per_page=100", function (data) {
             console.log(data)
             data.items.forEach(element => {
-                user = `<a target="_blank" href="${element.html_url}"><img class="img-thumbnail ml-4" width="100" height="100" src="${element.avatar_url}"/></a>`
+                user = `<a target="_blank" href="${element.html_url}"><img class="img-thumbnail ml-5" width="150" height="100" src="${element.avatar_url}"/></a>`
 
                 $("#results").append(user)
             });
@@ -52,7 +53,7 @@ $(document).ready(function () {
         $.get("https://api.github.com/search/users?q=followers:>=" + follower + "&per_page=100", function (data) {
             
             data.items.forEach(element => {
-                user = `<a target="_blank" href="${element.html_url}"><img class="img-thumbnail ml-4" width="100" height="100" src="${element.avatar_url}"/></a>`
+                user = `<a target="_blank" href="${element.html_url}"><img class="img-thumbnail ml-5" width="150" height="100" src="${element.avatar_url}"/></a>`
 
                 $("#results").append(user)
             });
