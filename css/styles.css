@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+
+#heading1{
+    padding: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+#form{
+    width: 50%;
+}
+#form input{
+    width: 100%;
+}
