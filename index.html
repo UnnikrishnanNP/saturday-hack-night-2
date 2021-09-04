@@ -1,12 +1,30 @@
+  
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
     <title>Git Fetcher</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center;">Git Fetcher</h1>
+      <form>
+        <div class="form-group">
+            <input type="range" min="0" max="10000" value="0" class="form-control" id="slider">
+            <label id="follower" for="follower">No of Followers: </label>
+        </div>
+        <div class="form-group">
+            <input type="range" min="0" max="10000" value="0" class="form-control" id="minimum">
+            <label id="minimumFollowers" for="follower">Minimum Followers: </label>
+        </div>
+        <div class="form-group">
+            <input type="range" min="0" max="10000" value="0" class="form-control" id="maximum">
+            <label id="maximumFollowers" for="follower">Maximum Followers: </label>
+        </div>
+      </form>
+      <div id="results"></div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
 </html>
