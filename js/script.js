@@ -6,7 +6,14 @@ $(document).ready(function () {
     var stars
     searchUserByFollower()
 
-        
+    $("#stars").change(function(){
+        stars = $("#stars").val()
+        $("#starred").html("Maximum stars: " + stars)
+
+        mostStarred(stars)
+
+    })
+    
     // showing minimum value enterd in slider
     $("#minimum").change(function () {
         minimumFollower = $("#minimum").val()
@@ -25,13 +32,7 @@ $(document).ready(function () {
 
     })
 
-    $("#stars").change(function(){
-        stars = $("#stars").val()
-        $("#starred").html("Maximum stars: " + stars)
 
-        mostStarred(stars)
-
-    })
 
     // this function helps us to get the most followed in github
     function searchUserByFollower() {
@@ -83,7 +84,6 @@ $(document).ready(function () {
                             `
                     
                 $("#results").append(user)
-                $("#footer").html("Click on the name to checkout the repo")
             });
             
         })
