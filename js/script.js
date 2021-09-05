@@ -59,7 +59,7 @@ $(document).ready(function () {
         $.get("https://api.github.com/search/users?q=followers:" + minimumFollower + ".." + maximumFollower + "&per_page=100", function (data) {
             console.log(data)
             data.items.forEach(element => {
-                user = `<a target="_blank" href="${element.html_url} style="padding:10px">
+                user = `<a target="_blank" href="${element.html_url}" style="padding:10px">
                             <img class="img-thumbnail ml-5" width="150" height="100" src="${element.avatar_url}"/>
                             </a>
                             `
