@@ -28,7 +28,7 @@ $(document).ready(function () {
     // this function helps us to get users between a certain range
     function searchFollowers(minimumFollower, maximumFollower) {
         $("#results").empty()
-        $("#text-change").html("Followers between " + minimumFollower + " and " + maximumFollower);
+        $("#text-change").html("Users with followers between " + minimumFollower + " and " + maximumFollower);
         $.get("https://api.github.com/search/users?q=followers:" + minimumFollower + ".." + maximumFollower + "&per_page=100", function (data) {
             console.log(data)
             data.items.forEach(element => {
