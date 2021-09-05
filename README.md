@@ -20,7 +20,7 @@ We will be adding more features on the coming days.
 - Vanila JavaScript
 - GitHub API
 
-## Contributers
+## Contributors
 
 - [Sneha M](https://github.com/Sneha314)
 - [Anjana C](https://github.com/anjana-c-maker)
