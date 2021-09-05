@@ -58,7 +58,7 @@ $(document).ready(function () {
         $.get("https://api.github.com/search/users?q=followers:" + minimumFollower + ".." + maximumFollower + "&per_page=100", function (data) {
             console.log(data)
             data.items.forEach(element => {
-                user = `<a target="_blank" href="${element.html_url} style="padding:10px"">
+                user = `<a target="_blank" href="${element.html_url} style="padding:10px">
                             <img class="img-thumbnail ml-5" width="150" height="100" src="${element.avatar_url}"/>
                             </a>
                             `
@@ -77,12 +77,13 @@ $(document).ready(function () {
         $.get("https://api.github.com/search/repositories?q=stars:" + stars + "&per_page=100", function (data) {
             console.log(data)
             data.items.forEach(element => {
-                user = `<a target="_blank" href="${element.html_url} style="padding:10px"">
-                            <img class="img-thumbnail ml-5" width="150" height="100" src="${element.avatar_url}"/>
+                user = `<a target="_blank" href="${element.html_url}" style="text-decoration:none">
+                            <p style="font-size:1.5rem;color:white;text-align:center"><br>${element.name}</p>
                             </a>
                             `
-                
+                    
                 $("#results").append(user)
+                $("#footer").html("Click on the name to checkout the repo")
             });
             
         })
